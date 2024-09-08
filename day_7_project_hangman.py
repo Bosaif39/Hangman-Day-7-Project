@@ -1,7 +1,7 @@
 import random
 
 words = [
-    "adventure", "balloon", "butterfly", "chocolate", "dolphin", "elephant",
+    "adventure", "ardvark", "butterfly", "chocolate", "dolphin", "elephant",
     "fashion", "giraffe", "horizon", "incredible", "jungle", "kiwi",
     "library", "mystery", "notebook", "octopus", "puzzle", "quasar",
     "rainbow", "sapphire", "telescope", "umbrella", "vaccine", "whale",
