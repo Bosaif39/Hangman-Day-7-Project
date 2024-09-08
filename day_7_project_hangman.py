@@ -1,6 +1,16 @@
 import random
 
-words = ["ardvark", "baboon", "camel"]
+words = [
+    "adventure", "balloon", "butterfly", "chocolate", "dolphin", "elephant",
+    "fashion", "giraffe", "horizon", "incredible", "jungle", "kiwi",
+    "library", "mystery", "notebook", "octopus", "puzzle", "quasar",
+    "rainbow", "sapphire", "telescope", "umbrella", "vaccine", "whale",
+    "xylophone", "yacht", "zebra", "zeppelin", "acrobatic", "bicycle",
+    "calendar", "dinosaur", "exquisite", "flamingo", "guitar", "hologram",
+    "internet", "jigsaw", "kangaroo", "lighthouse", "moonlight", "ninja",
+    "original", "paradise", "quarantine", "robotics", "snowflake", "trampoline",
+    "unicorn", "volcano", "waterfall", "xenon", "yogurt", "zoology"
+]
 
 chosen_word = random.choice(words)
 wordLen = len(chosen_word)
