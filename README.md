@@ -24,4 +24,4 @@ This is the Day 7 project from the 100 Days of Code: The Complete Python Pro Boo
 
 ## **Requirements:**
 
-Python 3.x
+* Python 3.x
