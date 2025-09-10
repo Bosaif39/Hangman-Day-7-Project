@@ -6,7 +6,9 @@
 
 ## **Overview:**
 
-This is the Day 7 project from the 100 Days of Code: The Complete Python Pro Bootcamp. The Hangman game allows the user to guess letters of a word chosen randomly by the computer. The player wins by guessing all letters correctly before running out of lives, otherwise, they lose.
+This is the Day 7 project from the 100 Days of Code: The Complete Python Pro Bootcamp. 
+
+The Hangman game allows the user to guess letters of a word chosen randomly by the computer. The player wins by guessing all letters correctly before running out of lives, otherwise, they lose.
 
 ## **How It Works:**
 
