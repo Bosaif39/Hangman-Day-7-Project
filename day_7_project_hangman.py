@@ -1,6 +1,7 @@
 import random
 
-words = [
+# List of possible words
+word_bank = [
     "adventure", "ardvark", "butterfly", "chocolate", "dolphin", "elephant",
     "fashion", "giraffe", "horizon", "incredible", "jungle", "kiwi",
     "library", "mystery", "notebook", "octopus", "puzzle", "quasar",
@@ -12,41 +13,41 @@ words = [
     "unicorn", "volcano", "waterfall", "xenon", "yogurt", "zoology"
 ]
 
-chosen_word = random.choice(words)
-wordLen = len(chosen_word)
-my_list = ['_'] * wordLen
-print(my_list)
+# Pick a random word
+secret_word = random.choice(word_bank)
+word_length = len(secret_word)
 
-lives = 6
+# Underscore placeholders for each letter
+current_progress = ['_'] * word_length
+print(current_progress)
 
-#List to keep track of guessed letters
-guess_list = []
+remaining_lives = 6
 
-#Main game loop: continues until the player has guessed all letters or runs out of lives
+# Keep track of guessed letters
+used_letters = []
 
-while '_' in my_list:
-    print(f"You have {lives} lives left")
-    guess = input("Guess a letter: ").lower()
+# Main game loop: runs until player wins or loses
+while '_' in current_progress:
+    print(f"You have {remaining_lives} lives left")
+    player_guess = input("Guess a letter: ").lower()
     
-    for i in range(wordLen):
-        if chosen_word[i] == guess:
+    for i in range(word_length):
+        if secret_word[i] == player_guess:
+            current_progress[i] = player_guess
+            print(current_progress)
 
-            my_list[i] = guess
-            print(my_list)
-
-            if ('_' not in my_list):
+            if '_' not in current_progress:
                 print("You win")
                 break  
     
-    if (guess in guess_list):
-        print(f"You have used the letter {guess}")
+    if player_guess in used_letters:
+        print(f"You already guessed the letter '{player_guess}'")
     
-    
-    elif (guess not in chosen_word):
-        print(f"The letter {guess} is not in the word")
-        guess_list.append(guess)  
-        lives -= 1
+    elif player_guess not in secret_word:
+        print(f"The letter '{player_guess}' is not in the word")
+        used_letters.append(player_guess)  
+        remaining_lives -= 1
         
-        if (lives == 0):
-            print("You lose")
-            break  
+        if remaining_lives == 0:
+            print(f"You lose, the word was '{secret_word}'")
+            break
